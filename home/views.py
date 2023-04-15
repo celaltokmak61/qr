@@ -9,3 +9,9 @@ def services(request):
 
 def pricing(request):
     return render(request, 'pricing.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def register(request):
+    return render(request, 'register.html')
