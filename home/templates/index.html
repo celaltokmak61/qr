@@ -1,13 +1,8 @@
-{% include 'partials/_top.html' %}
-	
-<!-- navigation -->
-{% include 'partials/_nav.html' %}
-
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
 <!-- home section -->
 {% include 'partials/_homesec.html' %}
-
-<!-- service section -->
-{% include 'partials/_servicesec.html' %}
 
 <!-- divider section -->
 {% include 'partials/_divider.html' %}
@@ -30,9 +25,6 @@
 <!-- divider section -->
 {% include 'partials/_divider.html' %}
 
-<!-- pricing section -->
-{% include 'partials/_pricing.html' %}
-
 <!-- divider section -->
 {% include 'partials/_divider.html' %}
 
@@ -42,19 +34,5 @@
 <!-- divider section -->
 {% include 'partials/_divider.html' %}
 
-<!-- footer section -->
-{% include 'partials/_footer.html' %}
 
-<!-- divider section -->
-{% include 'partials/_divider.html' %}
-
-<!-- copyright section -->
-{% include 'partials/_copyright.html' %}
-
-
-<!-- scrolltop section -->
-<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
-
-
-<!-- javascript js -->	
-{% include 'partials/_bottom.html' %}
+{% endblock %}

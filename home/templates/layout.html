@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'partials/_head.html' %}
+<body data-spy="scroll" data-target=".navbar-collapse">
+    <!-- navigation -->
+{% include 'partials/_nav.html' %}
+
+{% block content %}
+
+{% endblock %}
+
+<!-- footer section -->
+{% include 'partials/_footer.html' %}
+
+
+<!-- scrolltop section -->
+<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- javascript js -->	
+{% include 'partials/_js.html' %}
+</body>
+</html>    
