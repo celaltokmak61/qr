@@ -1,3 +1,4 @@
+{% load static %}
 <div id="portfolio">
 	<div class="container">
 		<div class="row">
@@ -8,46 +9,22 @@
 				<!-- ISO section -->
 				<div class="iso-section">
 					<ul class="filter-wrapper clearfix">
-                   		 <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
-                   		 <li><a href="#" class="opc-main-bg" data-filter=".html">HTML</a></li>
-                   		 <li><a href="#" class="opc-main-bg" data-filter=".photoshop">Photoshop</a></li>
-                    	 <li><a href="#" class="opc-main-bg" data-filter=".wordpress">Wordpress</a></li>
-                    	 <li><a href="#" class="opc-main-bg" data-filter=".mobile">Mobile</a></li>
+                   		 <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>                   	
+                   		 {% for names in name %}
+                    		<li><a href="#" class="opc-main-bg" data-filter=".{{ names.name }}">{{ names.name }}</a></li>
+						 {% endfor %}
                		</ul>
                		<div class="iso-box-section">
                			<div class="iso-box-wrapper col4-iso-box">
-
-               				<div class="iso-box html photoshop wordpress mobile col-md-4 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img1.jpg" alt="portfolio img"></a>
-               				 </div>
-
-               				 <div class="iso-box html wordpress mobile col-md-4 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img2.jpg" alt="portfolio img"></a>
-               				 </div>
-
-               				 <div class="iso-box wordpress col-md-4 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img3.jpg" alt="portfolio img"></a>
-               				 </div>
-
-               				 <div class="iso-box html mobile col-md-6 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img4.jpg" alt="portfolio img"></a>
-               				 </div>
-
-               				 <div class="iso-box wordpress col-md-6 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img5.jpg" alt="portfolio img"></a>
-               				 </div>
-
-               				 <div class="iso-box html photoshop col-md-4 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img6.jpg" alt="portfolio img"></a>
-               				 </div>
-
-               				 <div class="iso-box photoshop col-md-4 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img7.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img7.jpg" alt="portfolio img"></a>
-               				 </div>
-
-               				 <div class="iso-box wordpress col-md-4 col-sm-6 col-xs-12">
-               				 	<a href="static/img/portfolio-img8.jpg" data-lightbox-gallery="portfolio-gallery"><img src="static/img/portfolio-img8.jpg" alt="portfolio img"></a>
-               				 </div>
+							{% for kategori in category %}
+								{% if galeris %}
+									{% for galeri in galeris %}
+										<div class="iso-box {{ kategori.name }} col-md-4 col-sm-6 col-xs-12">
+											<a href="images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img src="{{ galeri.image }}" alt="portfolio img"></a>
+										</div>	
+									{% endfor %}
+								{% endif %}								
+							{% endfor %}
 
                			</div>
                		</div>
@@ -57,3 +34,4 @@
 		</div>
 	</div>
 </div>		
+		

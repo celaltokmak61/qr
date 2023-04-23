@@ -83,3 +83,11 @@ $(document).ready(function() {
 					$('html, body').animate({scrollTop: 0}, 300);
 				})
 			});
+
+			$('#sponsor-carousel').carousel({
+				interval: 3000,
+				cycle: true
+			  }); 
+
+
+			  

@@ -1,0 +1,39 @@
+.slider-container {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    margin: 15px auto;
+  }
+  
+  .slider {
+    width: 1800px;
+    display: flex;
+    animation: slider 15s linear infinite;
+  }
+  
+  .slider img {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .slider {
+      width: 1200px;
+    }
+    
+    .slider img {
+      width: 150px;
+      height: 100px;
+      margin-right: 5px;
+    }
+  }
+  
+  @keyframes slider {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-900px);
+    }
+  }

@@ -1,0 +1,8 @@
+{% load static %}
+<div class="slider-container">
+  <div class="slider">
+    {% for references in reference %}
+						<a href="images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img src="{{ references.image }}" alt="portfolio img"></a>
+		{% endfor %}
+  </div>
+</div>
