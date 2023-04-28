@@ -9,6 +9,7 @@ CONSTANCE_ADDITIONAL_FIELDS = {
     }],
 }
 CONSTANCE_CONFIG = {
+<<<<<<< Updated upstream
     'FOOTER_TEXT': ('Bu sayfa bir günlük otağı projesidir.', 'footer text'),
     'KEYWORDS': ('chat gpt makale, chatgpt, chatmakale, makale botu', 'keywords'),
     'SITE_NAME': ('ChatGPT Makale', 'site name'),
@@ -23,5 +24,15 @@ CONSTANCE_CONFIG_FIELDSETS = {
         'SITE_NAME',
         'SITE_DESCRIPTION',
         'OPENAI_KEY'
+=======
+    'INSTAGRAM': ('', 'instagram profile url'),
+    'EMAIL': ('', 'email contact'),
+}
+
+CONSTANCE_CONFIG_FIELDSETS = {
+    'SOCIAL MEDIA': (
+        'INSTAGRAM',
+        'EMAIL'
+>>>>>>> Stashed changes
     ),
 }
