@@ -1,18 +1,18 @@
 .slider-container {
     width: 100%;
-    max-width: 300px;
+    max-width: 1200px;
     overflow: hidden;
     margin: 15px auto;
   }
   
   .slider {
-    width: 300px;
+    width: 12000px;
     display: flex;
-    animation: slider 5s linear infinite;
+    animation: slider 15s linear infinite;
   }
   
   .slider img {
-    width: 150px;
+    width: 300px;
     height: 150px;
     margin-right: 10px;
   }
@@ -23,7 +23,7 @@
     }
     
     .slider img {
-      width: 150px;
+      width: 300px;
       height: 100px;
       margin-right: 5px;
     }
@@ -34,6 +34,6 @@
       transform: translateX(0px);
     }
     100% {
-      transform: translateX(-100px);
+      transform: translateX(-900px);
     }
   }
