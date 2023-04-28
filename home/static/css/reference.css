@@ -1,14 +1,14 @@
 .slider-container {
     width: 100%;
-    max-width: 900px;
+    max-width: 300px;
     overflow: hidden;
     margin: 15px auto;
   }
   
   .slider {
-    width: 1800px;
+    width: 300px;
     display: flex;
-    animation: slider 15s linear infinite;
+    animation: slider 5s linear infinite;
   }
   
   .slider img {
@@ -19,7 +19,7 @@
   
   @media only screen and (max-width: 768px) {
     .slider {
-      width: 1200px;
+      width: 300px;
     }
     
     .slider img {
@@ -34,6 +34,6 @@
       transform: translateX(0px);
     }
     100% {
-      transform: translateX(-900px);
+      transform: translateX(-100px);
     }
   }

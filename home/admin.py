@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import about, galeri_name, galeri, reference
+from .models import About, GalleryType, Gallery, Reference
 
 # Register your models here.
 
-admin.site.register(about)
-admin.site.register(galeri_name)
-admin.site.register(galeri)
-admin.site.register(reference)
+admin.site.register(About)
+admin.site.register(GalleryType)
+admin.site.register(Gallery)
+admin.site.register(Reference)

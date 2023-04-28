@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from .models import about , galeri_name, galeri, reference
+from .models import About , GalleryType, Gallery, Reference
 
 # Create your views here.
 def index(request):
-    abouts = about.objects.first()
-    galeri_names = galeri_name.objects.all()
-    galeris = galeri.objects.filter(is_active=True)
-    category= galeri.objects.get(is_active=True).category.all()
-    references = reference.objects.all()
+    abouts = About.objects.first()
+    galeri_names = GalleryType.objects.all()
+    galeris = Gallery.objects.filter(is_active=True)
+    category= Gallery.objects.get(is_active=True).category.all()
+    references = Reference.objects.all()
 
     return render(request, 'index.html', {'abouts': abouts, 'name': galeri_names, 'galeris': galeris, 'category': category, 'reference': references })
 
