@@ -3,9 +3,9 @@
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
 				<h2>Our Office</h2>
-				<p>101 Clean Street, California, CA 10110</p>
+				<p>Adres: {{ADDRESS}}</p>
 				<p>Email: <span>{{EMAIL}}</span></p>
-				<p>Phone: <span>010-020-0340</span></p>
+				<p>Phone: <span>{{NUMBER}}</span></p>
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<h2>Social Us</h2>
@@ -13,10 +13,12 @@
 					{% if INSTAGRAM %}
 					<li><a href="{{INSTAGRAM}}" target="_blank" class="fa fa-instagram"></a></li>
 					{% endif %}
-					
-					<li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-google-plus"></a></li>
-					<li><a href="#" class="fa fa-dribbble"></a></li>
+					{% if FACEBOOK %}
+					<li><a href="{{FACEBOOK}}" target="_blank" class="fa fa-facebook"></a></li>
+					{% endif %}
+					{% if TWITTER %}
+					<li><a href="{{TWITTER}}" target="_blank" class="fa fa-twitter"></a></li>
+					{% endif %}
 				</ul>
 			</div>
 		</div>

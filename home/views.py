@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About , GalleryType, Gallery, Reference
+from .models import About , GalleryType, Gallery, Reference, Planing, Services
 
 # Create your views here.
 def index(request):
@@ -12,10 +12,14 @@ def index(request):
     return render(request, 'index.html', {'abouts': abouts, 'name': galeri_names, 'galeris': galeris, 'category': category, 'reference': references })
 
 def services(request):
-    return render(request, 'services.html')
+    service = Services.objects.first()
+
+    return render(request, 'services.html', {'service': service})
 
 def pricing(request):
-    return render(request, 'pricing.html')
+    plans = Planing.objects.filter(is_active=True)
+
+    return render(request, 'pricing.html', {'plans': plans})
 
 def login(request):
     return render(request, 'login.html')

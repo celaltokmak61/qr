@@ -9,13 +9,23 @@ CONSTANCE_ADDITIONAL_FIELDS = {
     }],
 }
 CONSTANCE_CONFIG = {
+    'TWITTER': ('', 'twitter profile url'),
+    'EMAIL': ('', 'email adress'),
+    'NUMBER': ('', 'phone number'),
+    'FACEBOOK': ('', 'facebook profile url'),
+    'ADDRESS': ('', 'address'),
     'INSTAGRAM': ('', 'instagram profile url'),
-    'EMAIL': ('', 'email contact'),
 }
 
 CONSTANCE_CONFIG_FIELDSETS = {
     'SOCIAL MEDIA': (
-        'INSTAGRAM',
-        'EMAIL'
+        'TWITTER',
+        'FACEBOOK',
+        'INSTAGRAM'
+    ),
+     'CONTACT': (
+        'NUMBER',
+        'EMAIL',
+        'ADDRESS',
     ),
 }
