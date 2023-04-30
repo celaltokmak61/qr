@@ -6,7 +6,7 @@ def index(request):
     abouts = About.objects.first()
     galeri_names = GalleryType.objects.all()
     galeris = Gallery.objects.filter(is_active=True)
-    category= Gallery.objects.get(is_active=True).category.all()
+    category= Gallery.objects.filter(is_active=True)
     references = Reference.objects.all()
 
     return render(request, 'index.html', {'abouts': abouts, 'name': galeri_names, 'galeris': galeris, 'category': category, 'reference': references })

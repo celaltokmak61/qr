@@ -13,4 +13,7 @@ def site_info(request):
         'TWITTER': config.TWITTER,
         'ADDRESS': config.ADDRESS,
         'INSTAGRAM': config.INSTAGRAM,
+        'SITENAME': config.SITENAME,
+        'CONTEXT': config.CONTEXT,
+        'SLOGAN': config.SLOGAN,
     }

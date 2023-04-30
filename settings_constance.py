@@ -15,6 +15,9 @@ CONSTANCE_CONFIG = {
     'FACEBOOK': ('', 'facebook profile url'),
     'ADDRESS': ('', 'address'),
     'INSTAGRAM': ('', 'instagram profile url'),
+    'SITENAME': ('', 'site name'),
+    'CONTEXT': ('', 'context'),
+    'SLOGAN': ('', 'slogan'),
 }
 
 CONSTANCE_CONFIG_FIELDSETS = {
@@ -27,5 +30,10 @@ CONSTANCE_CONFIG_FIELDSETS = {
         'NUMBER',
         'EMAIL',
         'ADDRESS',
+    ),
+     'WELCOME SCREEN': (
+        'SITENAME',
+        'SLOGAN',
+        'CONTEXT',
     ),
 }
